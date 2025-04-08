@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+
+
+body {
+	background-color: #006;
+}
+#wrapper {
+	margin-right: auto;
+	margin-left: auto;
+}
+h5 {
+	font-size: 12px;
+}
+#sideBar {
+	position:absolute;
+	width:205px;
+	height:733px;
+	z-index:1;
+	top: 190px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	padding: 20px;
+	background-color: #ebebeb;
+	color: #006;
+	left: 15px;
+}
+#nav1 {
+	position:absolute;
+	width:860px;
+	height:45px;
+	z-index:1;
+	top: 15px;
+	left: 15px;
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #009999;
+	padding-left: 20px;
+}
+#banner {
+	position:absolute;
+	width:880px;
+	height:80px;
+	z-index:1;
+	left: 15px;
+	top: 63px;
+}
+#nav2 {
+	position:absolute;
+	width:876px;
+	height:35px;
+	left: 15px;
+	top: 145px;
+	background-color: #FFF;
+	border: thin solid #006;
+	z-index: 6;
+}
+#title {
+	position:absolute;
+	width:300px;
+	height:56px;
+	z-index:1;
+	left: 310px;
+	top: 190px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bolder;
+	background-color: #FFF;
+	text-align: center;
+	color: #009999;
+	padding-top: 20px;
+	text-transform: capitalize;
+}
+#mainImg {
+	position:absolute;
+	width:310px;
+	height:420px;
+	z-index:2;
+	left: 310px;
+	top: 275px;
+}
+#bottomImgFiller {
+	position:absolute;
+	left:293px;
+	top:569px;
+	width:601px;
+	height:67px;
+	z-index:5;
+	background-color: #FFF;
+}
+#leftWhiteFiller {
+	position:absolute;
+	left:270px;
+	top:190px;
+	width:31px;
+	height:483px;
+	z-index:1;
+	background-color: #FFF;
+}
+#paypalDetails {
+	position:absolute;
+	left:625px;
+	top:190px;
+	width:240px;
+	height:484px;
+	z-index:5;
+	background-color: #FFF;
+	padding-left: 30px;
+	color: #009999;
+	font-size: medium;
+	font-weight: bolder;
+}
+#advertisingText {
+	position:absolute;
+	width:589px;
+	z-index:7;
+	left: 251px;
+	top: 678px;
+	color: #0C007D;
+	padding-left: 20px;
+	margin-left: 20px;
+	background-color: #E2E2E2;
+	height: 285px;
+
+#imgHolder {
+	position:absolute;
+	width:637px;
+	height:114px;
+	z-index:1;
+	left: 11px;
+	top: 164px;
+}
+#apDiv10 {
+	position:absolute;
+	width:882px;
+	height:24px;
+	z-index:8;
+	left: 16px;
+	top: 966px;
+	font-weight: normal;
+	color: #FFF;
+	background-color: #009999;
+	text-align: center;
+}
+a:link {
+	color: #009999;
+}
+a:hover {
+	color: #009;
+}

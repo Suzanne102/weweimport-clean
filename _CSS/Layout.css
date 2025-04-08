@@ -1,0 +1,450 @@
+body {
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-color: #754c24;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+}
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+#container  {
+	width: 980px;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #FFFFFF; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.containermain {
+	width: 960px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background: #FFF; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	width: 980px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	border: 2px solid #960;
+}
+#nav1 {
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #754c24;
+	background-color: #FFF;
+	height: 30px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-left: 20px;
+	margin-top: 0px;
+}
+#container #header #nav1 p a {
+	color: #963;
+}
+#nav2 {
+	font-family: Arial;
+	font-size: 18px;
+	color: #754c24;
+	height: 50px;
+	background-color: #960;
+}
+.centerImage {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 8%;
+}
+h1, h2, h3, h4, h5, h6  {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	color: #754c24;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+.cell {
+	height: 175px;
+	width: 205px;
+	border: 1px solid #666;
+	float: left;
+	background-color: #FFF;
+	padding: 21px;
+}
+.cell p {
+	font-size: 12px;
+	font-weight: bold;
+	text-indent: -15px;
+	text-align: center;
+	color: #633;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.cell_sandal p {
+	font-size: 12px;
+	color: 633;
+	font-weight: bold;
+	text-align: center;
+	text-indent: -15px;
+}
+.cellx400 {
+	width: 400px;
+	height: 200px;
+	padding-left: 30px;
+	padding-top: 0px;
+}
+.cellx400p #mainContent .cellx400 p {
+	float: right;
+}
+.cell_vertical {
+	height: 240px;
+	width: 180px;
+	padding-left: 10px;
+	display: inline;
+	clear: right;
+	float: left;
+}
+.cell_vertical p {
+	font-size: 10px;
+	font-weight: bold;
+}
+.cell_300    {
+	float: left;
+	height: 300px;
+	width: 300px;
+	padding-left: 24px;
+	padding-right: 0px;
+}
+.cell_300 p {
+	font-size: 11px;
+	font-weight: bold;
+}
+.cell_sandal {
+	height: 300px;
+	width: 230px;
+	float: left;
+	padding: 10px;
+	background-color: #FFF;
+}
+.cellx400p #mainContent .table .cell_sandal a p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #754c24;
+}
+
+.cell_400 {
+	height: 300px;
+	width: 400px;
+	float: left;
+	padding-right: 45px;
+	padding-left: 45px;
+}
+.cell_400 p {
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: -20px;
+}
+#sidebar1 {
+	font-size: 16px;
+	background: #ebebeb;
+	width: 20%;
+	padding: 15px;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	float: left;
+	color: #91632D;
+}
+.sidebar1 ul {
+	list-style-type: none;
+	list-style-position: inside;
+	list-style-image: none;
+}
+.cellx400p #mainContent {
+	background: #FFFFFF;
+	color: #754c24;
+	border: thin dotted #000066;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	width: 1000px;
+	padding-bottom: 0px;
+	margin-top: -35px;
+	height: auto;
+}
+.cellx400p .container #mainContent h1 {
+	margin-bottom: 50px;
+}
+#mainContent h1 {
+	font-size: 24px;
+	text-transform: capitalize;
+	letter-spacing: 200%;
+	text-align: center;
+	color: #754c24;
+	padding-top: 10px;
+}
+#mainContent h2 {
+	font-size: 20px;
+	text-align: left;
+}
+#mainContent h3 {
+	font-size: 18px;
+	font: bold;
+}
+#mainContent h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font: bold;
+}
+#mainContent h5 {
+	font-size: 16px;
+	color: #663333;
+}
+#mainContent #PaypalDetails {
+	width: 220px;
+	padding-top: 20px;
+	z-index: auto;
+	top: 250px;
+	float: right;
+	visibility: visible;
+}
+.cellx400p #footer {
+	width: 1000px; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+	clear: both;
+	float: none;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+	background-color: #c79840;
+} 
+#footer {
+	width: 980px; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+	clear: both;
+	float: none;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-right: 0;
+	padding-left: 0;
+	background-color: #c79840;
+} 
+
+
+#wrapper #bottom {
+	font-family: Arial;
+	font-size: small;
+	background-color: #CC9;
+	color: #036;
+	margin-top: 20px;
+	padding-left: 50px;
+}
+.sidebar1 h1 {
+	color: #997639;
+	text-align: center;
+	text-transform: none;
+	line-height: -1.5px;
+}
+h2 {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: Arial;
+}
+h3 {
+	font-size: 16px;
+}
+h4 {
+	font-size: 14px;
+	color: #754c24;
+}
+h5 {
+	font-size: 12px;
+}
+h6 {
+	font-size: 10px;
+}
+#pareoBuckles {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: small;
+	line-height: 1em;
+	background-color: #FFC;
+	float: right;
+	height: 250px;
+	width: 200px;
+	color: #006;
+	clip: rect(auto,auto,auto,auto);
+}
+#mainImages {
+	position: absolute;
+	height: 582px;
+	width: 650px;
+	left: 483px;
+	top: 299px;
+	background-color: #FFF;
+}
+#mainContent #spacer {
+	background-color: #ffffff;
+	height: 50px;
+	width: 980px;
+	margin-top: 30px;
+	margin-left: 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	float: left;
+	display: block;
+}
+#Title h2 {
+	z-index: auto;
+	left: 550px;
+	top: 249px;
+	position: absolute;
+	width: 500px;
+}
+.redcolorBg   {
+	color: #E00;
+}
+.content {
+	width: 1000px;
+	padding-top: -20px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+}
+.cellx400p #mainContent #ima1 {
+	background-image: url(/Order/DogCollars/nguvu.html);
+	background-repeat: no-repeat;
+	height: 450px;
+	float: left;
+	clear: right;
+}
+.cellx400p #mainContent #ima2 {
+	background-image: url(../images/FullMoon_Jan1_315px.jpg);
+	background-repeat: no-repeat;
+	height: 220px;
+	width: 315px;
+	margin: 0;
+	position: relative;
+	float: right;
+}
+.cellx400p #mainContent #ima3 {
+	background-image: url(../images/LineUpM_190px223px.jpg);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 455px;
+	width: 190px;
+	clear: none;
+	float: right;
+}
+.textbuPadded {
+	font-size: 24px;
+	padding: 20px;
+	font-family: Arial;
+	color: #009;
+}
+.textbr16 {
+	font-family: Arial;
+	font-size: 16px;
+	font-style: normal;
+	color: #660000;
+}
+.textbr14 {
+	color: #633;
+	font-size: 14px;
+}
+
+.textable {
+	background-color: #FFF;
+	font-size: 12px;
+	padding-left: 12px;
+	padding-right: 20px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #633;
+}
+a:link {
+	text-decoration: none;
+	color: #984;
+	font-style: italic;
+	line-height: normal;
+	font-weight: bold;
+}
+a:visited {
+	text-decoration: none;
+	color: #00F;
+	font-style: italic;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+	color: #00EE00;
+	font-size: 120%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+img.figure {
+	float: right;
+	margin-left:10px;
+	margin-bottom:10px;
+	border: 1px solid #004;
+	padding:1px;
+}
+.figure img {
+	border: 1px solid #006;
+	padding:10px;
+}
+.figure {
+	display:inline-block;
+	vertical-align:top;
+	float:right;
+	width: 222px;
+	margin:15px 10px 5px 10px;
+}
+.figure p {
+	font: bold 1em/normal Verdana, Arial, Helvetica sans-serif;
+	color: #004;
+	text-align: center;
+	background-color:#e6f3ff;
+	border: 1px dashed #006;
+	padding: 5px;
+	margin:10px 0 0 0;
+	height:50px;
+}
+.clearfloat {
+	text-decoration: none;
+	clear: left;
+}
+.mainImages {
+	float: left;
+	width: 50%;
+	clear: none;
+}
+.cellx400p #mainContent .cell_300w {
+}
