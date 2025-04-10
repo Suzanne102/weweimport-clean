@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+body {
+
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	background-color: #004e6c;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.2;
+}
+
+#container {
+	width: 1080px;
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#nav1 {
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #754c24;
+	background-color: #FFF;
+	height: 30px;
+	padding: 0 10px;
+	margin: 0;
+}
+
+#mainContent {
+	background: #FFFFFF;
+	color: #336;
+	border: thin dotted #000066;
+	margin: 35px 0;
+	padding: 20px;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.content {
+	width: 960px;
+	padding: 10px 0;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0 25px;
+	color: #336;
+	padding-top: 10px;
+}
+
+#mainContent h1 {
+	font-size: 24px;
+	text-transform: capitalize;
+	text-align: center;
+	color: #336;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	clear: right;
+}
+
+#mainContent h2 {
+	font-size: 20px;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+#mainContent h3 {
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+#mainContent h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#mainContent h5 {
+	font-size: 16px;
+	color: #336;
+}
+
+#mainContent p {
+	font-size: 14px;
+	padding: 0 20px;
+	color: black;
+}
+
+.sidebar1 {
+	font-size: 16px;
+	background: #ebebeb;
+	width: 20%;
+	padding: 15px;
+	margin: 15px 15px 15px 0px;
+	float: left;
+	color: #339;
+}
+
+#footer {
+	width: 980px;
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+	clear: both;
+	margin: 0 auto;
+	padding: 10px 0;
+	background-color: #FC6;
+}
+
+a:link {
+	text-decoration: none;
+	color: #900;
+	font-style: italic;
+	font-weight: bold;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #009966;
+	font-style: italic;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+	color: 009966;
+	font-size: 120%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+img.figure {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #004;
+	padding: 1px;
+}
+
+.clearfloat {
+	clear: both;
+	float: left;
+	font-size: 12px;
+}
+
+.thumbnail:hover {
+
+	position: relative;
+	top: -25px;
+	left: -35px;
+	width: 500px;
+	height: auto;
+	display: block;
+	z-index: 999;
+}
+
+.textgreen {
+	text-color: green;
+}
+
+.cell200auto {
+	display: flex;
+	float: left;
+	width: 220px;
+	height: 240px;
+}
+
+.cell267auto {
+	display: flex;
+	float: left;
+	height: 345px;
+	width: auto;
+}
+
+.cell_300 {
+	width: 300px;
+	display: flex;
+	float: left;
+	padding-left: 20px;
+}
+
+.cell45percent {
+	display: flex;
+	width: 45%;
+}
+
+/* styles for bags from visual studio css */
+
+.bag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bag-item {
+    margin: 10px;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    max-width: 350px; /* Maximum width for each item */
+    width: 100%; /* Default to full width */
+}
+
+.bag-item img {
+    width: 100%; /* Ensure images scale within their containers */
+    height: auto;
+}
+
+.caption h3, .caption p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .bag-item {
+
+        width: calc(33.33% - 20px); /* Three items per row, minus margin */
+    }
+}
+
+@media (max-width: 768px) {
+    .bag-item {
+        width: calc(50% - 20px); /* Two items per row, minus margin */
+    }
+}
+
+@media (max-width: 400px) {
+    .bag-item {
+        width: 100%; /* One column on very small screens */
+    }
+}
