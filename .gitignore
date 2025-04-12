@@ -1,0 +1,19 @@
+# Ignore private files
+/private/
+
+# Ignore large folders temporarily
+public/images/6_Dogs/large/
+public/images/6dogs/detail/
+public/images/1sandals/detail/
+public/images/3_Bags/Canvas/301-Ipad/large/
+public/images/3_Bags/Canvas/306-Sally/large/
+public/images/3_Bags/Canvas/308-Patricia/large/
+public/images/3_Bags/Canvas/317-Lisa/large/
+
+
+# Ignore all PSD files
+*.psd
+
+# Optional: ignore backups or exports
+*.zip
+*.bak
