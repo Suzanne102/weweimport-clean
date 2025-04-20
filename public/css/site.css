@@ -92,13 +92,6 @@
   gap: 0.3rem;
 }
 
-.nav-toggle {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 .info-links a {
   text-decoration: none;
   color: #4c4637;
@@ -342,18 +335,21 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-.category-content h2 {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  color: #3b3b2e;
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
 }
 
-.category-content p {
-  font-size: clamp(1rem, 2vw, 1.6rem);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-} 
+/* When active, show the nav */
+.mobile-nav.active {
+  max-height: 500px; /* Adjust based on content height */
+}
+
+/* Smooth slide effect class */
+.mobile-nav.slide-down {
+  transition: max-height 0.4s ease-in-out;
+}
 
 /* Responsive Styles */
 @media (min-width: 900px) {
