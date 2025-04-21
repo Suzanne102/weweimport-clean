@@ -1,4 +1,4 @@
-const navToggle = [
+const sublinks = [
     {
       page: 'Wewe Import - Our products',
       links: [
