@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     section.links.forEach(link => {
       const a = document.createElement('a');
       a.href = link.url;
-      a.textContent = link.label;
+      a.innerHTML = `<i class="${link.icon}"></i> ${link.label}`;
       a.classList.add('mobile-link');
       sectionDiv.appendChild(a);
     });
@@ -67,7 +67,4 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileNav.classList.toggle('show');
   });
 });
-
-a.textContent = link.label;
-a.innerHTML = `<i class="${link.icon}"></i> ${link.label}`;
 

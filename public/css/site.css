@@ -480,10 +480,6 @@
   color: #2e4a39;
 }
 
-.mobile-nav.active {
-  display: block;
-}
-
 @media (min-width: 601px) {
   .mobile-nav {
     display: none !important;
