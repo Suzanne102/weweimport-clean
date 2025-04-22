@@ -1,6 +1,7 @@
-// site.js
+// ======================
+// Navigation Data
+// ======================
 
-// Data from nav-data.js
 const sublinks = [
   {
     page: 'Wewe Import - Our products',
@@ -39,9 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Create and inject the mobile nav container
   const mobileNav = document.createElement('nav');
   mobileNav.className = 'mobile-nav';
-  mobileNav.id = 'mobile-nav';
-  body.appendChild(mobileNav);
-
+  
   // Build nav content from sublinks
   sublinks.forEach(section => {
     const sectionDiv = document.createElement('div');
@@ -61,10 +60,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     mobileNav.appendChild(sectionDiv);
   });
-
+  
+  // Append the nav to the body
+  document.body.appendChild(mobileNav);
+  
   // Toggle visibility
   navToggle.addEventListener('click', () => {
-    mobileNav.classList.toggle('show');
+    mobileNav.classList.toggle('active');
   });
 });
 
