@@ -90,6 +90,13 @@ p {
   gap: 1rem;
 }
 
+.clearfloat {
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
 /* Info Links */
 .small-logo img {
   height: 50px;
@@ -201,7 +208,7 @@ p {
 }
 
 .product-tile img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* -- Info block -- */
@@ -264,7 +271,7 @@ p {
   margin-top: 1rem;
 }
 
-/* -- Category block -- */
+/* -- Category block -- for the Index Page */
 .category-block {
   padding: 3rem 1rem;
   text-align: center;
@@ -279,7 +286,7 @@ p {
 }
 
 .category-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -366,6 +373,31 @@ p {
 .mobile-nav.active {
   max-height: 500px;
 }
+
+.bags-page {
+  padding: 2rem;
+  background: #fdfbf6;
+}
+
+.category-section {
+  margin-bottom: 4rem;
+}
+
+.category-section h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+  color: #3e604c;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f5f0e1;
+  color: #4c4637;
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  border-top: 1px solid #ddd0b4;
+}
+
 
 /* Responsive Styles */
 @media (min-width: 900px) {
