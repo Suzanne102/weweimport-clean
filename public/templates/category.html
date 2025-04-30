@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category Page</title>
+    <link rel="stylesheet" href="../css/site.css" />
+    <script type="module" src="../js/site.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <div id="nav-placeholder"></div>
+      </header>
+
+      <main class="main-content">
+        <section class="intro-section">
+          <h1 class="intro-title">Welcome to [Category Name]</h1>
+          <p class="intro-subtitle">
+            Short introduction to the collection or the brand philosophy.
+          </p>
+        </section>
+
+        <section class="category-grid">
+          <div class="category-block">
+            <div class="category-content">
+              <img src="../images/sample1.jpg" alt="Item 1" />
+              <h2>Category 1</h2>
+              <p>Description of this category item.</p>
+              <a href="#" class="cta-button">View Category</a>
+            </div>
+          </div>
+
+          <div class="category-block">
+            <div class="category-content">
+              <img src="../images/sample2.jpg" alt="Item 2" />
+              <h2>Category 2</h2>
+              <p>Description of this category item.</p>
+              <a href="#" class="cta-button">View Category</a>
+            </div>
+          </div>
+          <!-- Repeat as needed -->
+        </section>
+
+        <section class="info-block">
+          <p>
+            Highlight store details, shipping info, or call-to-action for wholesale.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div id="footer-placeholder"></div>
+      </footer>
+    </div>
+
+    <script type="module">
+      async function loadComponent(url, placeholderId, callback) {
+        try {
+          const response = await fetch(url);
+          const html = await response.text();
+          document.getElementById(placeholderId).innerHTML = html;
+          if (callback) callback();
+        } catch (err) {
+          console.error(`Error loading ${url}:`, err);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        loadComponent('../templates/nav.html', 'nav-placeholder', setupMenuToggle);
+        loadComponent('../templates/footer.html', 'footer-placeholder');
+      });
+    </script>
+  </body>
+</html>
