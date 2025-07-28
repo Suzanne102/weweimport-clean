@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="INSERT META DESCRIPTION" />
+        <meta name="keywords" content="INSERT, KEYWORDS, HERE" />
+        <title>INSERT CATEGORY – Wewe Import</title>
+        <link rel="stylesheet" href="../css/site.css" />
+        <script type="module" src="../js/site.js"></script>
+
+        </head>
+    <body>
+        <!-- Inserting the Nav template -->
+        <div id="nav-placeholder"></div>
+        <div class="clearfloat"></div>
+        <div id="container">
+            <main class="main-content">
+                <section class="line-sheet-section">
+                  <h2>INSERT PRODUCT NAME</h2>
+                  <div class="product-grid">
+                    <div class="product-tile">
+                      <img src="../images/3-bags/Canvas/301-ipad/med/img-03.jpg" alt="Yellow Canvas Clutch" />
+                      <p class="product-caption">Yellow – 50€</p>
+                    </div>
+                    <div class="product-tile">
+                      <img src="../images/3-bags/Canvas/301-ipad/med/img-02.jpg" alt="Canvas Clutch" />
+                      <p class="product-caption">Red – 45€</p>
+                    </div>
+                    <!-- Add more product-tile blocks here -->
+                  </div>
+                </section>
+              </main>
+          
+            </main>
+            <div id="footer-placeholder"></div>
+
+            <script type="module">
+                async function loadComponent(url, placeholderId, callback) {
+                  try {
+                    const response = await fetch(url);
+                    const html = await response.text();
+                    document.getElementById(placeholderId).innerHTML = html;
+                    if (callback) callback(); // <-- run toggle setup after nav is in place
+                  } catch (err) {
+                    console.error(`Error loading ${url}:`, err);
+                  }
+                }
+              
+                document.addEventListener('DOMContentLoaded', () => {
+                  loadComponent('../templates/nav.html', 'nav-placeholder', setupMenuToggle);
+                  loadComponent('../templates/footer.html', 'footer-placeholder');
+                });
+              </script>
+              
+        </div>
+    </body>
+</html>

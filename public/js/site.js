@@ -1,72 +1,57 @@
-// ======================
-// Navigation Data
-// ======================
-
-const sublinks = [
-  {
-    page: 'Wewe Import - Our products',
-    links: [
-      { label: 'sandals', icon: 'fas fa-shoe-prints', url: 'pages/sandals.html' },
-      { label: 'belts', icon: 'fas fa-ruler-horizontal', url: 'pages/belts.html' },
-      { label: 'dog-collars', icon: 'fas fa-dog', url: 'pages/dog-collars.html' },
-      { label: 'accessories', icon: 'fas fa-gem', url: 'pages/accessories.html' },
-      { label: 'bags', icon: 'fas fa-shopping-bag', url: 'pages/bags.html' },
-      { label: 'jewelry', icon: 'fas fa-ring', url: 'pages/jewelry.html' },
-      { label: 'kikois', icon: 'fas fa-scroll', url: 'pages/kikois.html' },
-    ],
-  },
-  {
-    page: 'gen-info',
-    links: [
-      { label: 'general info', icon: 'fas fa-info-circle', url: 'pages/gen-info.html' },
-      { label: 'shop location', icon: 'fas fa-map-marker-alt', url: 'pages/location.html' },
-      { label: 'featured products', icon: 'fas fa-star', url: 'pages/featured-products.html' },
-      { label: 'enquiry form', icon: 'fas fa-envelope-open-text', url: 'pages/enquiry-form.html' },
-    ],
-  },
-  {
-    page: 'more-info',
-    links: [
-      { label: 'about us', icon: 'fas fa-users', url: 'pages/about-us.html' },
-      { label: 'reviews', icon: 'fas fa-comments', url: 'pages/reviews.html' },
-    ],
-  },
-];
-
-document.addEventListener('DOMContentLoaded', function () {
+// js/site.js
+function setupMenuToggle() {
   const navToggle = document.querySelector('.nav-toggle');
-  const body = document.body;
+  const desktopNav = document.querySelector('.desktop-nav');
+  const navLinks = document.querySelectorAll('.desktop-nav a');
+  const icon = navToggle.querySelector('i');
 
-  // Create and inject the mobile nav container
-  const mobileNav = document.createElement('nav');
-  mobileNav.className = 'mobile-nav';
-  
-  // Build nav content from sublinks
-  sublinks.forEach(section => {
-    const sectionDiv = document.createElement('div');
-    sectionDiv.classList.add('mobile-section');
+  if (navToggle && desktopNav) {
+    // Toggle menu on hamburger click
+    navToggle.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent click from bubbling up
+      desktopNav.classList.toggle('active');
 
-    const title = document.createElement('h3');
-    title.textContent = section.page;
-    sectionDiv.appendChild(title);
-
-    section.links.forEach(link => {
-      const a = document.createElement('a');
-      a.href = link.url;
-      a.innerHTML = `<i class="${link.icon}"></i> ${link.label}`;
-      a.classList.add('mobile-link');
-      sectionDiv.appendChild(a);
+      if (desktopNav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
     });
 
-    mobileNav.appendChild(sectionDiv);
-  });
-  
-  // Append the nav to the body
-  document.body.appendChild(mobileNav);
-  
-  // Toggle visibility
-  navToggle.addEventListener('click', () => {
-    mobileNav.classList.toggle('active');
-  });
-});
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        desktopNav.classList.remove('active');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
 
+    // Close menu if clicking outside
+    document.addEventListener('click', function(e) {
+      if (!desktopNav.contains(e.target) && !navToggle.contains(e.target)) {
+        desktopNav.classList.remove('active');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('../templates/nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+      setupMenuToggle(); // Call after nav inserted
+    });
+
+  fetch('../templates/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+});

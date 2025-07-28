@@ -1,15 +1,25 @@
-# Ignore private files
+# Ignore private folders
 /private/
 
-# Ignore large folders temporarily
-
-# Ignore all folders named 'large' anywhere in the project
-**/large/
-
-
-# Ignore all PSD files
+# Ignore Photoshop files
 *.psd
 
 # Optional: ignore backups or exports
 *.zip
 *.bak
+
+# Optional: ignore log and temp files
+*.log
+*.tmp
+
+# Ignore Mac system files (recommended)
+.DS_Store
+
+# Ignore OS-specific hidden files
+Thumbs.db
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Optional: ignore VS Code settings
+.vscode/

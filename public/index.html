@@ -3,15 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="author" content="Made by Suzanne Chartier" />
-    <!-- This means that yes, Google can list the page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- STYLESHEETS" -->
-	  <link href="css/site.css" rel="stylesheet" type="text/css" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+	  <link href="css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 	  <meta name="keywords" content="sandals, african sandals, kikois, kikoi towels, belts, leather sandals, beach towels, beach accessories, made in kenya, beaded sandals,sower, beaded flowers, maasai, masai, kenya, handmade" />
 	  <meta name="description" content="Wewe import is a commercial fashion website selling handmade products from Kenya. Beautiful leather beaded sandals inspired by the work of the Masai. We also sell nice Kikois and Kikois towels as well as leather beaded dog collars. Look at our various accessories for belts, kikois buckles, key chains and a small selection of handbags and beautiful beaded flowers."/>
@@ -19,6 +15,8 @@
 	  <!-- DOC TITLE -->
     <title>BEADED LEATHER AND CANVAS ASSESCCORIES HANDMADE IN kENYA BY WEWE IMPORT</title>
     <meta name="p:domain_verify" content="9871106c231e82cb6aabaa782f9f409d"/>
+
+    <script type="module" src="/js/site.js"></script>
 
 	  <!-- Google tag (gtag.js) -->
 	  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q2YZ4GBVW"></script>
@@ -38,12 +36,12 @@
     </header>
     <div class="clearfloat"></div>
 
-  	<!-- InstanceBeginEditable div class="MainContent" -->
+  	<!-- MainContent -->
   
     <div class="main-content">
-      <section class="hero-intro">
-        <h1 class="hero-title">Welcome to Wewe Import</h1>
-        <p class="hero-subtitle">
+      <section class="intro-section">
+        <h1 class="intro-title">Welcome to Wewe Import</h1>
+        <p class="intro-subtitle">
           Manufactured in Kenya – Handmade African Beaded&nbsp;Accessories<br>
           Crafted in the traditional Maasai designs and colors.</p>
       </section>
@@ -61,7 +59,7 @@
         
       <section class="category-block bags">
         <div class="category-content">
-          <img src="./images/welcome/wewe-shop-02.jpg" alt="Handmade Beaded Bags from Kenya" />
+          <img src="images/welcome/wewe-shop-02.jpg" alt="Handmade Beaded Bags from Kenya" />
           <h2>Bags</h2>
           <p>From limited edition leather Patricia bags to everyday canvas totes, our bags are practical, stylish, and beautifully beaded by skilled Kenyan artisans.</p>
           <a href="pages/bags.html" class="cta-button">View Bags</a>
@@ -103,12 +101,8 @@
         </div>
       </section>  
       <section class="info-block">
-      <p>
-        Welcome to our shop, located in the heart of Jávea, Spain. All our goods are handmade in Kenya by talented artisans, and we proudly ship throughout Europe, Africa, and North America. For any questions or wholesale inquiries, please don’t hesitate to reach out.
-      </p>
-    
-      <p>
-        I carry a wide selection of items in stock—Kikois, Sandals, Bags, Dog Collars, Belts, and other unique Accessories. If you're located in the U.S. or Canada, please contact me to find out what’s available from my Canadian stock.
+      <p>Welcome to our shop, located in the heart of Jávea, Spain. All our goods are handmade in Kenya by talented artisans, and we proudly ship throughout Europe, Africa, and North America. For any questions or wholesale inquiries, please don’t hesitate to reach out.
+      </br>I carry a wide selection of items in stock—Kikois, Sandals, Bags, Dog Collars, Belts, and other unique Accessories. If you're located in the U.S. or Canada, please contact me to find out what’s available from my Canadian stock.
       </p>
       <img src="images/welcome/wewe-shop-01.jpg" alt="Wewe Import Shop" class="shop-image" />  
     </section>
@@ -136,11 +130,11 @@
         <div class="contact-highlight">
         
           <p>💬 <strong>Quick Message?</strong><br>
-            <a href="https://wa.me/34676749695" target="_blank">📱 Chat with me on WhatsApp</a>
+            <a href="https://wa.me/34676749695" target="_blank" rel="noopener noreferrer">📱 Chat with me on WhatsApp</a>
           </p>
           
           <p>🛍️ <strong>Shop on Etsy:</strong><br>
-            <a href="https://www.etsy.com/shop/weweimport.etsy.com" target="_blank">Visit Wewe Import on Etsy</a>
+            <a href="https://www.etsy.com/shop/weweimport.etsy.com" target="_blank" rel="noopener noreferrer">Visit Wewe Import on Etsy</a>
           </p>
       </div>
       </section>
@@ -164,13 +158,12 @@
               src="https://maps.google.com/maps?q=Wewe%20Import%20Javea&t=&z=15&ie=UTF8&iwloc=&output=embed"
               allowfullscreen
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
         </div>
         <div class="location-thumbs">
           <img src="images/ota/thumbs/shop-01.jpg" alt="Our Shopfront in Jávea" />
-          <img src="./images/ota/thumbs/shop-02.jpg" alt="Beaded Sandals Close-Up" />
+          <img src="images/ota/thumbs/shop-02.jpg" alt="Beaded Sandals Close-Up" />
           <img src="images/ota/thumbs/shop-03.jpg" alt="Artisan Beading" />
         </div>
         
@@ -180,13 +173,13 @@
 
       <script>
         document.addEventListener('DOMContentLoaded', function () {
-          fetch('../templates/nav.html')
+          fetch('templates/nav.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('nav-placeholder').innerHTML = data;
             });
       
-          fetch('../templates/footer.html')
+          fetch('templates/footer.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('footer-placeholder').innerHTML = data;
@@ -195,7 +188,6 @@
       </script>
     </div><!-- end # MainContent-->      
     <!-- FontAwasome  -->
-    <script type="module" src="js/site.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
 
     
